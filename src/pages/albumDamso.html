@@ -1,0 +1,32 @@
+{{define "albumDamso.html"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Damso</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <main>
+        <a class="close" href="/">X</a>
+        <div class="items">
+            {{range .Albums}}
+            <div class="item">
+                <div class="info">
+                    <h2>{{ .Name }}</h2>
+                    <h3>Date de sortie: {{ .Release_date }}</h3>
+                    <h4>Nombre de musique: {{ .Total_tracks }}</h4>
+                </div>
+                <img src="{{ (index .Images 0).Url }}" alt="">
+            </div>
+            {{end}}
+        </div>
+    </main>
+</body>
+
+</html>
+{{end}}

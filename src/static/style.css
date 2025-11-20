@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?cs=srgb&dl=pexels-pixabay-164938.jpg&fm=jpg");
+    background-size: 100%;
+    /* background-repeat: no-repeat; */
+    backdrop-filter: blur(10px);
+    font-family: "Montserrat", sans-serif;
+
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    min-height: 100vh;
+}
+
+main a img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s;
+}
+
+main a img:hover {
+    transform: scale(1.1);
+}
+
+main .items {
+    background: #96939344;
+    max-height: 500px;
+    width: 500px;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+main .items .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+main .items .item img {
+    width: 50px;
+    border-radius: 10px;
+}
+
+main .track-card img {
+    width: 300px;
+}
+
+main .track-card {
+    background: #96939344;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+
+main .track-card a {
+    display: block;
+    margin-top: 1rem;
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+main .track-card a:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+}
+
+.close {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+{{define "trackLaylow.html"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracks Laylow</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <main>
+        <a class="close" href="/">X</a>
+
+        <div class="track-card">
+            <img src="{{ (index .Tracks.Album.Images 0).Url }}" alt="Album cover">
+
+            <h2>{{ .Tracks.Name }}</h2>
+
+            <p class="album-info">
+                <strong>Album :</strong> {{ .Tracks.Album.Name }} <br>
+                <strong>Date de sortie :</strong> {{ .Tracks.Album.Release_date }} <br>
+                <strong>Artiste :</strong> {{ (index .Tracks.Artists 0).Name }}
+            </p>
+
+            <a href="{{ .Tracks.External_urls.Spotify }}" target="_blank">Écouter sur Spotify</a>
+        </div>
+    </main>
+
+</body>
+
+</html>
+{{end}}
